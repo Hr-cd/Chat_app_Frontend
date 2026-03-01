@@ -23,7 +23,7 @@ function Login() {
     };
     // console.log(userInfo);
     axios
-      .post(`${process.env.VITE_API_URL}/api/user/login`, userInfo, {
+      .post(`${import.meta.env.VITE_API_URL}/api/user/login`, userInfo, {
         withCredentials: true,
       })
       .then((response) => {

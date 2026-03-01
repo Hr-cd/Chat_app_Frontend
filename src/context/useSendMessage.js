@@ -9,7 +9,7 @@ const useSendMessage = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        `${process.env.VITE_API_URL}/api/message/send/${selectedConversation._id}`,
+        `${import.meta.env.VITE_API_URL}/api/message/send/${selectedConversation._id}`,
         { message }
       );
       setMessage([...messages, res.data]);

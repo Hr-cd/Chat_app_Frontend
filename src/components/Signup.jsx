@@ -32,7 +32,7 @@ function Signup() {
     };
     // console.log(userInfo);
     await axios
-      .post(`${process.env.VITE_API_URL}/api/user/signup`, userInfo)
+      .post(`${import.meta.env.VITE_API_URL}/api/user/signup`, userInfo)
       .then((response) => {
         if (response.data) {
           toast.success("Signup successful");

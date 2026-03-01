@@ -38,7 +38,7 @@ export const SocketProvider = ({ children }) => {
     return;
   }
   // console.log("authUser:", authUser);
-  const newSocket = io(process.env.VITE_API_URL, {
+  const newSocket = io(`${import.meta.env.VITE_API_URL}`, {
     query: { userId: authUser.user._id },
     withCredentials: true,
   });
