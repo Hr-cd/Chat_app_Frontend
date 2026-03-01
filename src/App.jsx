@@ -5,6 +5,7 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import { useAuth } from "./context/AuthProvider";
 import { Toaster } from "react-hot-toast";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import { Navigate, Route, Routes } from "react-router-dom";
 function App() {
@@ -36,6 +37,7 @@ function App() {
         />
       </Routes>
       <Toaster />
+      <SpeedInsights />
     </div>
   );
 }
